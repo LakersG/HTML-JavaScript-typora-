@@ -44,31 +44,31 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
 
 <em>王干饭</em> 
 
-<em></em>
+<!--<em></em>-->
 
 着重文字
 
 <b>王干饭</b> 
 
-<b></b>
+<!--<b></b>-->
 
 粗体文字
 
 <i>王干饭</i> 
 
-<i></i>
+<!--<i></i>-->
 
 斜体文字
 
 <del>王干饭</del> 
 
-<del></del>
+<!--<del></del>-->
 
 删除文字
 
 <span>王干饭</span> 
 
-<span></span>
+<!--<span></span>-->
 
 无特殊含义
 
@@ -104,7 +104,6 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
     <tr>111</tr>
     <tr>222</tr>
 </table>
-
 行<tr>
 列<td>
 快捷方式 table>tr*n>td*n{}
@@ -138,15 +137,15 @@ alert("") 弹窗
 
 #### 文本框：
 
-<input type="text" name="textarea">
+<!--<input type="text" name="textarea">-->
 
 #### 密码框：
 
-<input type="password">
+<!--<input type="password">-->
 
 #### 提交框：
 
-<input type="submit" value="按钮文字 ">
+<!--<input type="submit" value="按钮文字 ">-->
 
 ## 3. 内联元素和块元素
 
@@ -154,9 +153,6 @@ alert("") 弹窗
 
 ## 5. H5新增容器
 
-<header><header> 头部
-<nav><nav> 导航栏
-<article><article> 
-<section><section>
-<aside><aside> 侧边栏
-<footer><footer> 底部
+
+
+![QQ截图20240129113129](C:\Users\86189\Desktop\QQ截图20240129113129.jpg)
