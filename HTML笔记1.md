@@ -27,7 +27,39 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
 
 
 
-## 2. 常见的HTML元素
+## 2. 常见的HTML标签
+
+标签是由标签名、标签属性和文本内容三部分组成（注意：单标签没有文本内容）
+
+标签属性是对标签的一种描述方式
+
+标签属性分通用属性、自有属性和自定义属性。
+
+### 通用属性
+
+所有标签都具有的属性，如：
+
+```
+id 给标签一个唯一的名称
+
+class 给标签一个类
+
+style 设置标签的行内样式
+
+title 鼠标移动到该标签所提示的内容
+```
+
+### 自定义标签
+
+通常用来传值。
+
+格式：data-*
+
+```
+<img data-src = "图片名" alt = "提示文本">
+```
+
+
 
 ### 2.1 水平线
 
@@ -143,8 +175,10 @@ type= none ' '
 
 ```
 <table> 
-    <tr>111</tr>
-    <tr>222</tr>
+    <tr>//行
+    	<th></th>//表头
+    	<td></td>//列
+    </tr>
 </table>
 ```
 
@@ -156,7 +190,17 @@ type= none ' '
  table>tr*n>td*n{}
 ```
 
+#### 属性
 
+​		border:表格边框
+
+​		width:表格宽度
+
+​		align:表格对齐方式（left（默认），right，center）
+
+​		cellpadding:单元格文本与边框的距离
+
+​		cellspacing: 单元格边框间距
 
 #### 表格合并
 
@@ -174,19 +218,9 @@ type= none ' '
   rowspan="" 
   ```
 
+#### 完整的表格组成
 
-
-### 2.8 Form 表单（用户输入的地方）
-
-1.容器
-2.控件（输入框，按钮）
-action ：服务器网址
-name ：表单名称
-method ：方式
-{
-  get url
-  post
-}
+​		caption（标题）、thead（表头）、tbody（表体）和tfoot（表尾）四部分组成。
 
 ```
 <input>: 输入框 -> type = "submit" （有提交按钮）
@@ -195,6 +229,77 @@ alert("") 弹窗
 ```
 
 
+
+## 3 Form 表单（用户输入的地方）
+
+核心标签之一，实现前后端交互
+
+常用属性：
+
+action ：表单数据提交的服务器网址
+name ：表单名称
+method ：方式 （get（会暴露数据）/post（不会暴露））
+
+### 1.input类
+
+| 控件名称     | type属性值   | 描述                                                         |
+| ------------ | :----------- | :----------------------------------------------------------- |
+| 文本框       | text(默认值) | 默认。定义一个单行的文本字段（默认宽度为 20 个字符）。       |
+| 密码框       | password     | 定义密码字段                                                 |
+| 单选按钮     | radio        | 定义单选按钮。(性别等)                                       |
+| 复选框       | checkbox     | 定义复选框。(爱好等)                                         |
+| 提交按钮     | submit       | 定义提交按钮。                                               |
+| 重置按钮     | reset        | 定义重置按钮（重置所有的表单值为默认值）。                   |
+| 图片提交按钮 | image        | 定义图像作为提交按钮。                                       |
+| 普通按钮     | button       | 定义可点击的按钮（通常与 JavaScript 一起使用来启动脚本）。   |
+| 隐藏文本框   | hidden       | 定义隐藏输入字段，前后台交互非常有用。                       |
+| 文件上传框   | file         | 定义文件选择字段和 “浏览…” 按钮，供文件上传。可以通过accept属性规范选取文件的类型。accept属性的值:<br/>image/* 接受所有的图像文件。<br/>image/png 表示只接受图片文件的png文件<br/>audio/* 接受所有的声音文件。<br/>video/* 接受所有的视频文件。<br/>multiple属性可以用来设置一次允许选择多个文件 multiple=“multiple” |
+
+属性：
+
+placeholder（提示）/ name（命名）/ minlength（最小长度）maxlength（最大长度）/ disabled（忽略）/ readonly（只读）
+
+### 2.textarea
+
+属性：
+
+name / id / cols（行数）/ rows（列数）/ placeholder（提示）/ minlength（最小长度）maxlength（最大长度）/ required / value
+
+定义文本域 (一个多行的输入控件)，输入大量的内容
+
+文本区域中可容纳无限数量的文本，其中的文本的默认字体是等宽字体（通常是 Courier）。
+
+可以通过 cols 和 rows 属性来规定 textarea 的尺寸大小，不过更好的办法是使用 CSS 的 height 和 width 属性。
+
+缩放设置：
+
+禁止缩放：resize: none;
+水平缩放：resize: horizontal;
+垂直缩放：resize: vertical;
+水平垂直缩放：resize: both;
+
+### 3.select类
+
+下拉列表框，默认用于单项选择。用option呈现每个选项。
+
+```
+<form>
+	<lable for="course">课程</lable>
+	<select id="course" multiple = "multiple"//可以多选，没有只能单选>
+		<option>语文</option>
+        <option>数学</option>	
+        <option>英语</option>	
+	</select>//for和id对应，产生关联
+</form>
+```
+
+multiple：表示可以多选。
+
+size：最多显示的行数。
+
+### 4.button类
+
+普通按钮，具有提交功能。可以单独使用，若写在form表单时中具有提交功能。
 
 #### 文本框：
 
@@ -205,18 +310,38 @@ alert("") 弹窗
 #### 密码框：
 
 ```
-<!--<input type="password">-->
+<input type="password">
 ```
 
 #### 提交框：
 
 ```
-<!--<input type="submit" value="按钮文字 ">-->
+<input type="submit" value="按钮文字 ">
 ```
 
 
 
-## 3. 内联（行级）元素和块元素
+### 5.iframe
+
+框架集，用来将多个网页组合成一个文件
+
+#### 属性：
+
+- name：框架名
+- src：引入的外部HTML文件
+- width：宽度
+- height：高度
+- frameborder： 是否有边框
+- marginheight：框架距离顶部和底部的距离
+- marginwidth：框架距离左右的距离
+
+#### 框架标签
+
+
+
+
+
+## 4. 内联（行级）元素和块元素
 
 ​		块级元素独占一行，识别宽高，如果不设置，宽度为整行宽度，高度为实际内容高度。
 
@@ -268,7 +393,7 @@ display: inline-block
 
 
 
-## 4. div(容器元素) 
+
 
 ## 5. HTML 5新增容器
 
