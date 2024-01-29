@@ -9,20 +9,23 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
 ## 1. 搭建框架
 
 <!DOCTYPE html>  ！+回车生成默认框架
-
 <head></head> 头部
 <title></title> 标题，显示在标签页
 <p></p> 段落
-<h1></h1>
 
+<h1></h1>
 <h6></h6>
+
 1~6级标题 快速 h$*n(n代表几级标题)
 
 ## 2. 常见的HTML元素
 
 ### 2.1 水平线
 
-<hr color= width= size= align=> 
+<hr>
+
+<hr color=black width= size= align=> 
+
 ### 2.2 图片
 
 <img src="" alt="">
@@ -33,23 +36,40 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
 
 ### 2.4 超链接
 
+<a></a>
+
 <a herf="转跳的网址"> 可以是anything </a>
 
 ### 2.5 文本标签
 
 <em>王干饭</em> 
+
+<em></em>
+
 着重文字
 
 <b>王干饭</b> 
+
+<b></b>
+
 粗体文字
 
 <i>王干饭</i> 
+
+<i></i>
+
 斜体文字
 
 <del>王干饭</del> 
+
+<del></del>
+
 删除文字
 
 <span>王干饭</span> 
+
+<span></span>
+
 无特殊含义
 
 ### 2.6 列表
@@ -60,12 +80,11 @@ HTML是一种超文本**标记语言**，标识性语言，而非**编程语言*
     <li>王干饭</li> 
     <li>陈干饭</li>
 </ol> 
-
-type= 1（1，2，3）
-type= a (a,b,c)
-type= A (A,B,C)
-type= i 小写罗马数字
-type= I 大写罗马数字
+`type= 1（1，2，3）`
+`type= a (a,b,c)`
+`type= A (A,B,C)`
+`type= i 小写罗马数字`
+`type= I 大写罗马数字`
 
 <ul> 
     <li>王干饭</li> 
@@ -74,30 +93,33 @@ type= I 大写罗马数字
 
 #### 无序标签
 
-type= dise '·' 
-type= circle 'o'
-type= suqare 方形
-type= none ' '
+`type= dise '·'` 
+`type= circle 'o'`
+`type= suqare 方形`
+`type= none ' '`
 
 ### 2.7 表格
 
 <table> 
     <tr>111</tr>
     <tr>222</tr>
-
 </table>
 
 行<tr>
 列<td>
 快捷方式 table>tr*n>td*n{}
 
-表格合并
-colspan="" 
+#### 表格合并
 
-水平合并 保留左边
-rowspan="" 
+- 水平合并 保留左边
 
-垂直合并 保留上边
+  colspan="" 
+
+- 垂直合并 保留上边
+
+​		rowspan="" 
+
+
 
 ### 2.8 Form 表单（用户输入的地方）
 
@@ -138,4 +160,3 @@ alert("") 弹窗
 <section><section>
 <aside><aside> 侧边栏
 <footer><footer> 底部
-
